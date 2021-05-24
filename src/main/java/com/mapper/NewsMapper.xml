@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NewsMapper">
+    <resultMap id="pc" type="com.entity.News">
+        <id column="id" property="id"  jdbcType="VARCHAR"></id>
+        <result column="title" property="title" jdbcType="VARCHAR"></result>
+        <result column="content" property="content" jdbcType="VARCHAR"></result>
+        <result column="createTime" property="createTime" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+
+    <select id="findAll" resultMap="pc">
+        select * from easybuy_news
+    </select>
+
+</mapper>
